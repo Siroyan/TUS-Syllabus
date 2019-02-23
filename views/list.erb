@@ -1,0 +1,28 @@
+<% @syllabuses.each do |syllabus| %>
+    <section class="syllabus" id="basic">
+        <span class="icon"><%= syllabus.gakka %></span>
+        <span class="icon"><%= syllabus.gakubu %></span>
+        <h1><%= link_to "#{syllabus.title}", "./syllabus/#{syllabus.id}" %></h1>
+        </h1>
+        <table>
+            <tr>
+                <th>担当教員</th>
+                <td><%= syllabus.instructor %></td>
+                <th>単位</th>
+                <td><%= syllabus.credit %></td>
+            </tr>
+            <tr>
+                <th>学期</th>
+                <td>前期</td>
+                <th>区分</th>
+                <td><%= syllabus.category %></td>
+            </tr>
+            <tr>
+                <th>コマ</th>
+                <td><%= syllabus.week %>・<%= syllabus.koma %></td>
+                <th>履修形態</th>
+                <td><%= syllabus.elective %></td>
+            </tr>
+        </table>
+    </section>
+<% end %>

@@ -1,0 +1,74 @@
+.syllabus {
+    font-size: 14px;
+    padding: 20px;
+    background: white;
+    border: solid 1px #ccc;
+}
+
+.syllabus h2 {
+    color: #a23131;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.syllabus p {
+    word-wrap: break-word;
+    padding: 5px;
+}
+
+p + h2 {
+    padding-top: 10px;
+}
+
+#basic {
+    background: #a1dd70;
+    font-size: 16px;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+#basic .icon {
+    font-size: 14px;
+    float: right;
+    padding: 5px;
+}
+
+#basic i {
+    float: right;
+    font-size: 24px;
+    padding: 5px;
+}
+
+#basic h1 {
+    color: white;
+    font-size: 26px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+#basic h1 a {
+    color: white;
+}
+
+#basic h1 a:visited {
+    color: white;
+}
+
+#basic table {
+    background: white;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#basic table th {
+    text-align: right;
+    font-weight: bold;
+    padding: 10px;
+}
+
+#basic table td {
+    text-align: left;
+    padding: 10px;
+}

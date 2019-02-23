@@ -1,0 +1,79 @@
+<section>
+    <div class="container" id="search">
+        <h2>しらばす検索</h2>
+        <form action="/search" method="post">
+            <input type="text" name="title" placeholder="授業名">
+            <input type="text" name="instructor" placeholder="講師名">
+            <table>
+                <tr>
+                    <td class="left">
+                        <select name="gakubu">
+                            <option value="">学部</option>
+                            <option value="理学部">理学部</option>
+                            <option value="工学部">工学部</option>
+                            <option value="理工学部">理工学部</option>
+                            <option value="基礎工学部">基礎工学部</option>
+                            <option value="薬学部">薬学部</option>
+                        </select>
+                    </td>
+                    <td class="right">
+                        <select name="gakka">
+                            <option value="">学科</option>
+                            <option value="数学科">数学科</option>
+                            <option value="応用数学科">応用数学科</option>
+                            <option value="化学科">化学科</option>
+                            <option value="応用化学科">応用化学科</option>
+                            <option value="物理学科">物理学科</option>
+                            <option value="応用物理学科">応用物理学科</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left">
+                        <select name="year">
+                            <option value="">年度</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                        </select>
+                    </td>
+                    <td class="right">
+                        <select name="gakki">
+                            <option value="">学期</option>
+                            <option value="前期">前期</option>
+                            <option value="後期">後期</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left">
+                        <select name="week">
+                            <option value="">曜日</option>
+                            <option value="月">月</option>
+                            <option value="火">火</option>
+                            <option value="水">水</option>
+                            <option value="木">木</option>
+                            <option value="金">金</option>
+                        </select>
+                    </td>
+                    <td class="right">
+                        <select name="koma">
+                            <option value="">時限</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="検索">
+        </form>
+    </div>
+</section>
+<section class="syllabus" id="explain">
+    <h2>"りかしら"とは?</h2>
+    <p>
+        hogehogehogehogehogehogehogehogehogehogehogehoge
+    </p>
+</section>

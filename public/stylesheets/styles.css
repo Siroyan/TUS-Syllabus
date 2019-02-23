@@ -1,0 +1,123 @@
+body {
+    font-family: "M PLUS Rounded 1c";
+    font-size: 16px;
+    margin: 0;
+    background: #fdfff0;
+}
+
+header {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 16px;
+    background: #e8ecd6;
+    border-bottom: solid 1px #ccc;
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+    text-shadow: 1px 1px 0 white,
+                -1px 1px 0 white,
+                1px -1px 0 white,
+                -1px -1px 0 white;
+}
+
+a {
+    text-decoration: none;
+}
+
+header h1 a {
+    color: #a1dd70;
+}
+
+header h1 a:visited {
+    color: #a1dd70;
+}
+
+header i {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+section {
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.container {
+    text-align: center;
+    padding: 10px;
+    background: #a1dd70;
+    margin: 0 auto;
+    border: solid 1px #ccc;
+}
+
+.container h2 {
+    font-size: 20px;
+    text-align: center;
+}
+
+#syllabus h1{
+    font-size: 20px;
+    color: white;
+}
+
+.container input[type="text"] {
+    width: calc(100%);
+    /* 14 means padding(5px) x 2 + border(2px) x 2 */
+    height: 40px;
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.container table {
+    width: 100%;
+}
+
+.container table td {
+    width: 50%;
+}
+
+.container table td[class="left"] {
+    text-align: left;
+}
+
+.container table td[class="right"] {
+    text-align: right;
+}
+
+.container table td select {
+    width: 80%;
+    height: 40px;
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: white;
+}
+
+.container input[type="submit"] {
+    width: 120px;
+    margin-top: 20px;
+    height: 40px;
+    padding: 5px;
+    font-size: 15px;
+    border-style: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #a23131;
+    color: white;
+}
+
+footer {
+    max-width: 100%;
+    text-align: center;
+    background: #e8ecd6;
+    padding: 30px;
+    color: slategrey;
+}
