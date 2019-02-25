@@ -21,11 +21,11 @@ get '/' do
 end
 
 post '/search' do
-    @syllabuses = Syllabus.select("id, title, instructor, gakubu, gakka, week, koma, credit, category, elective").where('title LIKE ?', "%#{params[:title]}%").where('instructor LIKE ?', "%#{params[:instructor]}%").where('gakubu LIKE ?', "#{params[:gakubu]}%").where('gakka LIKE ?', "#{params[:gakka]}%").where('week LIKE ?', "#{params[:week]}%").where('koma LIKE ?', "#{params[:koma]}%")
+    @syllabuses = Syllabus.all.where('title LIKE ? and instructor LIKE ? and gakubu LIKE ? and gakka LIKE ? and week LIKE ? and koma LIKE ?', "%#{params[:title]}%", "%#{params[:instructor]}%", "#{params[:gakubu]}%", "#{params[:gakka]}%", "#{params[:week]}%", "#{params[:koma]}%")
     erb :list
 end
 
 get '/syllabus/:id' do |id|
-    @syllabus = Syllabus.select("id, title, instructor, gakubu, gakka, week, koma, credit, category, elective").find(id)
+    @syllabus = Syllabus.all.find(id)
     erb :syllabus
 end
