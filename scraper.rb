@@ -28,13 +28,12 @@ sleep 0.5
 select = Selenium::WebDriver::Support::Select.new(driver.find_element(:id, 'form1:htmlGakkiNo'))
 select.select_by(:value, '1')
 sleep 0.5
-# 科目授業を選択
-select = Selenium::WebDriver::Support::Select.new(driver.find_element(:id, 'form1:htmlKamokJugyo'))
-select.select_by(:value, 'KB')
-sleep 0.5
+
 # 学科組織を選択
+# 110 - 教養 111 - S, 112 - B, 113 - K, 114 - OS, 115 - OB, 116 - OK
+# 140 - 教養 141 - A, 142 - C, 143 - E, 144 - I, 145 - M, 146 - i
 select = Selenium::WebDriver::Support::Select.new(driver.find_element(:id, 'form1:htmlGakka'))
-select.select_by(:value, '115')
+select.select_by(:value, '114')
 sleep 0.5
 
 # 検索ボタンをクリック
@@ -42,8 +41,12 @@ driver.find_element(:id, "form1:search").click
 sleep 0.5
 
 
-for page in 0..20 do
+for page in 0..12 do
     for num in 0..17 do
+        if (num + 18 * page) > 232 then
+            puts 'Scraping Complete!'
+            driver.quit
+        end
         # 一番上のシラバスをクリック
         driver.find_element(:id, "form1:htmlKekkatable:#{num + 18 * page}:htmlKamokuNameCol").click
         sleep 0.5
@@ -68,7 +71,7 @@ for page in 0..20 do
         syllabus.title = title
         syllabus.instructor = instructor
         syllabus.gakubu = '理学部'
-        syllabus.gakka = 'OB'
+        syllabus.gakka = 'OS'
         syllabus.week = zigen.chars[0]
         syllabus.koma = zigen.chars[2]
         syllabus.credit = credit
@@ -77,13 +80,10 @@ for page in 0..20 do
 
         syllabus.save
 
-        puts (num + 18 * page)
+        puts "Syllabus : #{num + 18 * page}"
         sleep 0.5
     end
     # 次のページボタンをクリック
     driver.find_element(:id, "form1:htmlKekkatable:deluxe1__pagerNext").click
     sleep 0.5
 end
-
-puts 'Scraping Complete!'
-driver.quit
