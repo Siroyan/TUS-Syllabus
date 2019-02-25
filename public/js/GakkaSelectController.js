@@ -35,7 +35,7 @@ gakubuSelector.addEventListener('change', () => {
                 let option = document.createElement("option");
                 option.value = rigakubu[i].val;
                 option.text = rigakubu[i].txt;
-                gakkaSelector.appendChild(option)
+                gakkaSelector.appendChild(option);
             }
             break;
         case 2:
@@ -44,7 +44,7 @@ gakubuSelector.addEventListener('change', () => {
                 let option = document.createElement("option");
                 option.value = kougakubu[i].val;
                 option.text = kougakubu[i].txt;
-                gakkaSelector.appendChild(option)
+                gakkaSelector.appendChild(option);
             }
             break;
         //TODO Others Gakka
@@ -56,5 +56,9 @@ function resetGakkaOptionsWithoutPlaceholder(){
         gakkaSelector.removeChild(gakkaSelector.options[i]);
     }
 }
+
+window.onpageshow = function(){
+    document.form.reset();
+};
 
 }
