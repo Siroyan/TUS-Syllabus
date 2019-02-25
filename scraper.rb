@@ -67,7 +67,7 @@ for page in 0..20 do
         syllabus = Syllabus.new
         syllabus.title = title
         syllabus.instructor = instructor
-        syllabus.gakubu = 1
+        syllabus.gakubu = '理学部'
         syllabus.gakka = 'OB'
         syllabus.week = zigen.chars[0]
         syllabus.koma = zigen.chars[2]
@@ -77,7 +77,7 @@ for page in 0..20 do
 
         syllabus.save
 
-        puts num
+        puts (num + 18 * page)
         sleep 0.5
     end
     # 次のページボタンをクリック
