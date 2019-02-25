@@ -1,6 +1,6 @@
 <% @syllabuses.each do |syllabus| %>
     <section class="syllabus" id="basic">
-        <span class="icon"><%= syllabus.gakka %></span>
+        <span class="icon"><%= syllabus.gakka %>科</span>
         <span class="icon"><%= syllabus.gakubu %></span>
         <h1><%= link_to "#{syllabus.title}", "./syllabus/#{syllabus.id}" %></h1>
         </h1>
